@@ -1,6 +1,5 @@
 package com.example.demo.client;
 
-import com.example.demo.ZkDataListener;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.curator.RetryPolicy;
 import org.apache.curator.framework.CuratorFramework;
@@ -33,7 +32,6 @@ public class ZkClient implements InitializingBean {
 
 
     private CuratorFramework zkCustor;
-    private Map<String, Set<ZkDataListener>> dataListener = new ConcurrentHashMap<>();
 
     @Override
     public void afterPropertiesSet() throws Exception {
