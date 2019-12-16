@@ -1,7 +1,6 @@
-package com.example.demo;
+package com.baidu.goodcoder;
 
-import com.example.demo.client.ZkClient;
-import com.sun.org.apache.xpath.internal.operations.Bool;
+import com.baidu.goodcoder.client.ZkClient;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;

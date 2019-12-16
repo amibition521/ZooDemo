@@ -1,4 +1,4 @@
-package com.example.demo.client;
+package com.baidu.goodcoder.client;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.curator.RetryPolicy;
@@ -15,10 +15,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.util.StringUtils;
-
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 
 @Slf4j
 public class ZkClient implements InitializingBean {

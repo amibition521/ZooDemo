@@ -1,6 +1,6 @@
-package com.example.demo;
+package com.baidu.goodcoder;
 
-import com.example.demo.bean.ResponseResult;
+import com.baidu.goodcoder.bean.ResponseResult;
 import org.junit.Assert;
 import org.junit.Test;
 

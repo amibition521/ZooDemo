@@ -1,6 +1,6 @@
-package com.example.demo.service;
+package com.baidu.goodcoder.service;
 
-import com.example.demo.client.ZkClient;
+import com.baidu.goodcoder.client.ZkClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 

@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.baidu.goodcoder.controller;
 
 import org.junit.Before;
 import org.junit.Test;

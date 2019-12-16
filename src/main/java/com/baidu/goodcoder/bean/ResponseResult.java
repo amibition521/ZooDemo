@@ -1,4 +1,4 @@
-package com.example.demo.bean;
+package com.baidu.goodcoder.bean;
 
 import lombok.Data;
 import lombok.Getter;

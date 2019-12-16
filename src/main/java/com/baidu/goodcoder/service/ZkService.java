@@ -1,4 +1,4 @@
-package com.example.demo.service;
+package com.baidu.goodcoder.service;
 
 public interface ZkService {
 

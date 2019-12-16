@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package com.baidu.goodcoder.controller;
 
-import com.example.demo.service.ZkService;
-import com.example.demo.bean.ResponseResult;
+import com.baidu.goodcoder.bean.ResponseResult;
+import com.baidu.goodcoder.service.ZkService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
