@@ -35,7 +35,9 @@ public class ZkController {
     public ResponseEntity<ResponseResult> delete(@RequestParam("path") String path){
         ResponseResult result = new ResponseResult();
         try {
-            zkService.delete(path);
+            if (zkService.isExist(path)){
+                zkService.delete(path);
+            }
         } catch (Exception e){
             e.printStackTrace();
         }
@@ -43,6 +45,7 @@ public class ZkController {
         result.setMsg("success");
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
+
     @ResponseBody
     @RequestMapping(value = "/get_node", method = RequestMethod.GET)
     public ResponseEntity<ResponseResult> getNode(@RequestParam("path") String path){
