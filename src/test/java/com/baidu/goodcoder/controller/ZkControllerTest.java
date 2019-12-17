@@ -32,7 +32,7 @@ public class ZkControllerTest {
 
     @Test
     public void testCreate() throws Exception {
-        RequestBuilder requestBuilder = MockMvcRequestBuilders.post("/zk/create").param("path", "node1")
+        RequestBuilder requestBuilder = MockMvcRequestBuilders.post("/zk/create").param("path", "/node1")
                 .param("data","node_data1");
         mvc.perform(requestBuilder).andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print());
@@ -40,21 +40,21 @@ public class ZkControllerTest {
 
     @Test
     public void testDelete() throws Exception {
-        RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/zk/delete").param("path", "node1");
+        RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/zk/delete").param("path", "/node1");
         mvc.perform(requestBuilder).andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print());
     }
 
     @Test
     public void testGet() throws Exception {
-        RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/zk/get").param("path", "node1");
+        RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/zk/get").param("path", "/node1");
         mvc.perform(requestBuilder).andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print());
     }
 
     @Test
     public void testUpdate() throws Exception {
-        RequestBuilder requestBuilder = MockMvcRequestBuilders.post("/zk/update").param("path", "node1")
+        RequestBuilder requestBuilder = MockMvcRequestBuilders.post("/zk/update").param("path", "/node1")
                 .param("data","node_data_new");
         mvc.perform(requestBuilder).andExpect(MockMvcResultMatchers.status().isOk())
                 .andDo(MockMvcResultHandlers.print());

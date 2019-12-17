@@ -14,16 +14,19 @@ import org.apache.zookeeper.data.Stat;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 @Slf4j
+@Component
 public class ZkClient implements InitializingBean {
 
     private static final Logger logger = LoggerFactory.getLogger(ZkClient.class);
 
     private static final int DEFAULT_TIME = 1000;
     private static final int DEFAULT_RETRY_TIMES = 5;
-    private static final String ZOOKEEPER_SERVER_URL = "127.0.0.1:2181";
+    private static final String ZOOKEEPER_SERVER_URL = "172.17.0.3:2181";
     private static final String DEFAULT_NAMESPACE = "nieyx";
 
 

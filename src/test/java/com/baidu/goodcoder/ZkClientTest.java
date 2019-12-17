@@ -20,7 +20,7 @@ public class ZkClientTest {
     @Test
     public void testExist(){
         try {
-            boolean exist = zkClient.isExist("node1");
+            boolean exist = zkClient.isExist("/node1");
             Assert.assertEquals(Boolean.FALSE, exist);
         } catch (Exception e){
             e.printStackTrace();
@@ -30,7 +30,7 @@ public class ZkClientTest {
     @Test
     public void testCreate() {
         try {
-            boolean result = zkClient.create("node1", "node_data1");
+            boolean result = zkClient.create("/node1", "node_data1");
             Assert.assertEquals(Boolean.TRUE, result);
         } catch (Exception e){
             e.printStackTrace();
@@ -40,7 +40,7 @@ public class ZkClientTest {
     @Test
     public void testDelete() {
         try {
-            boolean result = zkClient.delete("node1");
+            boolean result = zkClient.delete("/node1");
             Assert.assertEquals(Boolean.TRUE, result);
         } catch (Exception e){
             e.printStackTrace();
@@ -51,7 +51,7 @@ public class ZkClientTest {
     @Test
     public void testUpdate() {
         try {
-            boolean result = zkClient.update("node1", "node_data_new");
+            boolean result = zkClient.update("/node1", "node_data_new");
             Assert.assertEquals(Boolean.TRUE, result);
         } catch (Exception e){
             e.printStackTrace();
@@ -61,7 +61,7 @@ public class ZkClientTest {
     @Test
     public void testGet() {
         try {
-            String result = zkClient.getNode("node1");
+            String result = zkClient.getNode("/node1");
             Assert.assertEquals("node_data1", result);
         } catch (Exception e){
             e.printStackTrace();
