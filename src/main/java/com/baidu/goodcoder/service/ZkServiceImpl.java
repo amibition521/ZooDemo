@@ -2,13 +2,15 @@ package com.baidu.goodcoder.service;
 
 import com.baidu.goodcoder.client.ZkClient;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
 public class ZkServiceImpl implements ZkService {
 
-    private ZkClient zk;
+    @Autowired
+    public ZkClient zk;
 
     @Override
     public void create(String path, String data)  {
