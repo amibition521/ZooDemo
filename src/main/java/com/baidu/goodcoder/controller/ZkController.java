@@ -33,7 +33,7 @@ public class ZkController {
     }
 
     @ResponseBody
-    @GetMapping(value = "/delete")
+    @PostMapping(value = "/delete")
     public ResponseEntity<ResponseResult> delete(@RequestParam("path") String path){
         ResponseResult result = new ResponseResult();
         try {
